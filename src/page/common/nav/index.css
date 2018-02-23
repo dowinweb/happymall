@@ -1,0 +1,29 @@
+/**
+ * @Author: dongwei
+ * @Date:   2018-02-22 11:45:49
+ * @Last modified by:   dongwei
+ * @Last modified time: 2018-02-22 11:51:33
+ */
+
+.nav {
+  background: #eee;
+  height: 30px;
+  line-height: 30px;
+}
+.nav .user {
+  float: left;
+}
+.nav .user .link {
+  margin-left: 5px;
+}
+.nav .user.login {
+  display: none;
+}
+/*导航链接部分*/
+.nav .nav-list {
+  float: right;
+}
+.nav .nav-list .nav-item {
+  display: inline-block;
+  margin-left: 5px;
+}

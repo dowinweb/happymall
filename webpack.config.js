@@ -2,7 +2,7 @@
  * @Author: dongwei
  * @Date:   2018-02-20 22:56:52
  * @Last modified by:   dongwei
- * @Last modified time: 2018-02-21 11:22:00
+ * @Last modified time: 2018-02-21 22:47:03
  */
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -37,6 +37,15 @@ var config = {
   },
   externals: {
     'jquery': 'window.jQuery'
+  },
+  resolve: {
+    alias: {
+      node_modules: __dirname + '/node_modules',
+      util: __dirname + '/src/util',
+      page: __dirname + '/src/page',
+      service: __dirname + '/src/service',
+      image: __dirname + '/src/image',
+    }
   },
   module:{
     loaders:[

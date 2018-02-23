@@ -1,0 +1,22 @@
+/**
+ * @Author: dongwei
+ * @Date:   2018-02-22 11:06:18
+ * @Last modified by:   dongwei
+ * @Last modified time: 2018-02-22 11:46:45
+ */
+.nav-simple{
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+
+}
+.nav-simple .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #c60023;
+}
+
+body{
+  background: red;
+}
