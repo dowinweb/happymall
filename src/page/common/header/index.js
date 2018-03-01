@@ -2,7 +2,7 @@
  * @Author: dongwei
  * @Date:   2018-02-22 12:04:44
  * @Last modified by:   dongwei
- * @Last modified time: 2018-02-22 12:12:47
+ * @Last modified time: 2018-02-27 22:20:21
  */
 require('./index.css')
 
@@ -13,8 +13,34 @@ var header = {
   init: function() {
     this.bindEvent()
   },
+  onLoad: function() {
+    var keyword = _mm.getUrlParam('keyword')
+    if (keyword) {
+      $('#search-input').val(keyword)
+    }
+  },
   bindEvent: function() {
-
+    var _this = this
+    $('#search-btn').click(function() {
+      _this.searchSubmit()
+    })
+    // 输入回车
+    $('#search-input').keyup(function(e) {
+      if (e.keyCode === 13) {
+        _this.searchSubmit()
+      }
+    })
+  },
+  // 搜索的提交
+  searchSubmit: function () {
+    var keyword = $.trim($('#search-input').val())
+    if (keyword) {
+      window.location.href = './list.html?keyword=' + keyword
+    }
+    // 如果keyword为空， 直接返回首页
+    else {
+      _mm.goHome()
+    }
   }
 }
 header.init()
